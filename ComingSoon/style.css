@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', 'Nunito', sans-serif;
+    list-style-type: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #8eaeff;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #6e6cd0; 
+  transition: all .3s ease-in-out;
+}
+::-webkit-scrollbar-thumb {
+  background: #716cd0; 
+  transition: all .3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8eb4ff; 
+  border-radius: 100px;
+  transition: all .3s ease-in-out;
+}
+
+/* Index css starts here */
+
+/*MAIN AREA*/
+
+.mainArea{
+    height: 500px;
+    width: 100%;
+    min-height: 100vh;
+    background: #080715;
+    position: relative;
+}
+
+/*Nav Bar*/
+
+.main-width{
+    width: 1400px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.main-bg{
+  height: 100vh;
+  background-image: url("img/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.main-bg:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(70deg, rgba(8, 7, 21, 1) 0%, rgba(8, 7, 21, 1) 50%, rgba(8, 7, 21, 0) 100%);
+}
+
+/* Logo */
+
+.logo{
+    align-items: center;
+}
+
+.headLogo{
+    width: 35px;
+    height: 35px;
+}
+
+.mainArea header .logo h2 a{
+    display: flex;
+    font-size: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+
+.mainArea header .logo h2 a:hover{
+  color: #978eff;
+
+}
+
+.mainArea header .logo h2 a:active{
+  color: #6c7bd0;
+
+}
+
+.Spacer {
+    position: relative;
+    left: 10px;
+}
+
+/* ul list */
+
+.mainArea header{
+  display: flex;
+  align-items: center;
+  padding: 40px 0 30px;
+  z-index: 1;
+  position: relative;
+}
+
+.ul{
+    text-align: center;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    margin-left: 60px;
+    font-size: 14px;
+    font-weight: 300;
+    transition: .4s;
+}
+
+nav ul li a:active{
+    transition: .4s;
+}
+
+nav ul li:not(:last-child) a:hover,
+nav ul li:not(:last-child) a:focus{
+    color: #373af9;
+}
+
+nav ul li:not(:last-child) a:active{
+  color: #0020d3;
+}
+
+nav ul li.active a{
+    color: #378ef9;
+}
+
+/* sign in button */
+
+.btn{
+    text-decoration: none;
+    background: transparent;
+    color: white;
+    border: 1px solid #ffff;
+    padding: 10px 30px;
+    border-radius: 6px;
+    line-height: 1.4;
+    margin-left: auto;
+    transition: .4s;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.btn:hover{
+    background: transparent;
+    color: #008edb;
+    border: 1px solid #0063db;
+}
+
+.btn:active{
+  background: transparent;
+  color: #004dac;
+  border: 1px solid #0034ac;
+}
+
+/* Mobile nav bar */
+
+.menubtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#menubox{
+  display: none;
+}
+
+@media (max-width: 952px){
+  nav ul li{
+    font-size: 16px;
+  }
+
+  body{
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 858px){
+
+  body{
+    overflow: hidden;
+  }
+  
+  .menubtn{
+    display: block;
+    position: relative;
+    left: 45px;
+  }
+
+  .mainArea header {
+    padding: 5px 0 30px;
+  }
+
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #22233a4a;
+    backdrop-filter: blur(10px);
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+    z-index: -1;
+  }
+
+  nav ul li{
+    display: block;
+    margin: 100px 0;
+    line-height:30px;
+  }
+
+  nav ul li a{
+    font-size: 20px;
+    margin-left: 0px;
+  }
+
+  a:hover,a.active{
+    background: none;
+  }
+
+  #menubox:checked ~ ul{
+    left: 0;
+  }
+}
+
+/*Nav Bar Ends Here*/
+
+/* Main content */
+
+.mainContent{
+    padding-top: 140px;
+}
+
+/* Main Text */
+
+.mainContent .main-text{
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.mainContent .main-text h1{
+    font-size: 35px;
+    line-height: 1;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: contents;
+}
+
+.goo{
+  background: -webkit-linear-gradient(255deg, #86a8ff 0%, rgba(0, 51, 255, 0.47) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.mainContent .main-text p{
+    max-width: 100%;
+    width: 480px;
+    color: #686586;
+    line-height: 1.8;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* discord button */
+
+.mainContent .main-text a{
+  display: inline-block;
+  text-decoration: none;
+  color: #686586;
+  transition: all .3s ease-in-out;
+  padding: 15px 12px;
+  background: #22233A;
+  border-radius: 6px;
+  height: 50px
+}
+
+.mainContent .main-text a:hover{
+  background: #4e5185;
+  color: rgb(215, 215, 215);
+}
+
+.mainContent .main-text a:active{
+  background: #383a60;
+  color: rgb(255, 255, 255);
+}
+
+/* button */
+
+.mainContent .main-text button {
+    background: #132575;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    padding: 17px 30px;
+    position: relative;
+    transition: .4s;
+  }
+
+  .mainContent .main-text button:hover {
+    background: #007bff;
+    transition: .4s;
+  }
+
+  .mainContent .main-text button:active {
+    background: #007cdb;
+    transition: .4s;
+  }
+
+/* Socials */
+
+.social{
+  position: relative;
+  display: flex;
+  margin-top: 35px;
+  padding-bottom: 40px;
+  transition: .4s;
+}
+
+.social a{
+    display: inline-block;
+    color: #686586;
+    margin-right: 25px;
+    font-size: 24px;
+    transition: .4s;
+}
+
+.social a:hover{
+    transition: .4s;
+    color: #fff;
+}
+
+.social a:active{
+  transition: .4s;
+  color: #dbdbdb;
+}
+
+/* Main area ends here */
+
+/* Index css ends here */
+
+
+
+/* Sign In css starts here */
+
+.sign-bg{
+  height: 100vh;
+  background-image: url("img/bg2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.sign-bg:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(0deg, rgba(8, 7, 21, 1) 0%, rgba(8, 7, 21, 1) 30%, rgba(8, 7, 21, 1) 40%, rgba(8, 7, 21, 0) 100%);
+}
+
+#error-page {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#error-page .content{
+  max-width: 600px;
+  text-align: center;
+}
+
+.content h4{
+  text-transform: uppercase;
+  color: white;
+  font-size: 2em;
+  max-width: 600px;
+  position: relative;
+  top: 90px;
+  font-family: Nunito;
+}
+.content h6{
+  font-size: 1.2em;
+  color: #68648E;
+  bottom: -95px;
+  font-weight: 100;
+  position: relative;
+  font-family: Nunito;
+}
+
+.content .btns{
+  margin: 25px 0;
+  display: inline-flex;
+  top: 100px;
+  align-items: center;
+  position: relative;
+}
+
+.button {
+	display: flex;
+	height: 50px;
+	padding: 0;
+	background: #4C66FF;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	overflow: hidden;
+	font-family: "Quicksand", sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+  transition: .4s;
+}
+
+.button:hover {
+	background: #3a51d1;
+}
+
+.button:active {
+	background: #263690;
+}
+
+.button__text{
+  display: inline-flex;
+	align-items: center;
+	padding: 0 24px;
+	color: #fff;
+	height: 100%;
+  font-family: Nunito;
+}
+
+.button__icon {
+	display: inline-flex;
+	align-items: center;
+	padding: 0 24px;
+	color: #4C66FF;
+	height: 100%;
+}
+
+.button__icon {
+	font-size: 1.5em;
+	background: #FFFFFF;
+  padding: 10px;
+}
+
+/* Sign In css ends here */
+
+
+
+/* Faq css starts here */
+
+.faq-bg{
+  height: 100%;
+  background-image: url("img/bg3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.faq-bg:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(70deg, rgba(8, 7, 21, 1) 0%, rgba(8, 7, 21, 1) 30%, rgba(8, 7, 21, 1) 40%, rgba(8, 7, 21, 0) 100%);
+}
+
+.accordion .main-text{
+  margin-top: 10px;
+  text-align: left;
+  z-index: 1;
+  position: relative;
+}
+
+.accordion .main-text h1{
+  color: #fff;
+  font-weight: 500;
+}
+
+.accordion .main-text p{
+  color: #686586;
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #18172C;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: #ffffff;
+}
+.accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: #18172C;
+  border: 1px solid #18172C;
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded='true'] {
+  color: white;
+}
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  color: #686586;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+
+/* Faq css ends here */
