@@ -15,5 +15,3 @@ This is the official source code of Slurp Website :O
 - Faq Page
 
 *More website features shall come in the future.*
-
-Made by [@MafiaMac]()
